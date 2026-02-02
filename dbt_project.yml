@@ -44,3 +44,9 @@ models:
     firstfile:
       +materialized: view  # all models in dbtlearning will be tables
       +schema: stripe  
+    stg_orders:   
+      +materialized: table  # all models in dbtlearning will be tables
+      +schema: jaffle_shop      
+    stg_customers:   
+      +materialized: table  # all models in dbtlearning will be tables
+      +schema: jaffle_shop            
