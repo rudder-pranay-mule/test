@@ -37,7 +37,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   jaffle_shop:
-   dbtlearning:
-    customers:
-      +materialized: table
-      +schema: stripe
+    +schema: stripe      # all models go into stripe dataset
+    dbtlearning:
+      +materialized: table  # all models in dbtlearning will be tables
