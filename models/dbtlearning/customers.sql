@@ -1,6 +1,3 @@
-{{ config(materialized='table', schema='stripe') }}
-
-
 with customers as (
 
     select
