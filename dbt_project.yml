@@ -49,4 +49,17 @@ models:
       +schema: jaffle_shop      
     stg_customers:   
       +materialized: table  # all models in dbtlearning will be tables
-      +schema: jaffle_shop            
+      +schema: jaffle_shop       
+
+   staging:
+    stg_jaffle_shop__customers:
+      +materialized: view 
+      +schema: staging          
+    stg_jaffle_shop__orders:
+      +materialized: view 
+      +schema: staging          
+
+   mart:
+    dim_customers:
+      +materialized: table 
+      +schema: mart    
